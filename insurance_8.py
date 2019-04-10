@@ -10,7 +10,7 @@ Created on Tue Apr  9 13:09:14 2019
 import pandas as pd
 import numpy as np
 
-data = pd.ExcelFile('/Users/sbk/Desktop/RA/Data-All.xlsx')
+data = pd.ExcelFile(r"C:\Users\SUJITH KUMAR\Downloads\Insurance-master\Data-All.xlsx")
 print(data.sheet_names)
 df1 = data.parse('Sheet1')
 print(df1.info())
