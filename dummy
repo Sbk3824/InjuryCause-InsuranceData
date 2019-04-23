@@ -1,0 +1,17 @@
+# Determining the featues that most contribute to the cause of injury
+
+from sklearn.feature_selection import SelectKBest
+from sklearn.feature_selection import chi2
+
+
+# Feature extraction
+test = SelectKBest(score_func=chi2, k=4)
+fit = test.fit(features, labels)
+
+# Summarize scores
+np.set_printoptions(precision=3)
+print(fit.scores_)
+
+features_1 = fit.transform(features)
+# Summarize selected features
+print(features_1[0:10,:])
